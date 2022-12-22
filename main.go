@@ -43,21 +43,21 @@ func main() {
 	// begin insertOne
 	userCollection := client.Database("codebasedb").Collection("users")
 
-	// resultInsert, err := InsertUser(userCollection, "Andy", "andy@gmail.com", "4649938263657520")
-	// if err != nil {
-	// 	panic(err)
-	// }
-	// // end insertOne
+	resultInsert, err := InsertUser(userCollection, "Andy", "andy@gmail.com", "4649938263657520")
+	if err != nil {
+		panic(err)
+	}
+	// end insertOne
 
-	// fmt.Println(resultInsert)
+	fmt.Println(resultInsert)
 
-	// resultInsert, err = InsertUser(userCollection, "Bony", "bony@gmail.com", "4649932469202470")
-	// if err != nil {
-	// 	panic(err)
-	// }
-	// // end insertOne
+	resultInsert, err = InsertUser(userCollection, "Bony", "bony@gmail.com", "4649932469202470")
+	if err != nil {
+		panic(err)
+	}
+	// end insertOne
 
-	// fmt.Println(resultInsert)
+	fmt.Println(resultInsert)
 
 	// find One
 	userOne, err := FindByEmail(userCollection, "wuri@yahoo.com")
